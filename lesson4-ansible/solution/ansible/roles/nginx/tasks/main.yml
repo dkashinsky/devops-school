@@ -1,6 +1,4 @@
 ---
-- import_tasks: selinux.yml
-
 - name: ensure that nginx is installed
   yum:
     pkg: nginx
@@ -21,8 +19,6 @@
   template:
     src: index.html.j2
     dest: "{{ server_root_directory }}/index.html"
-
-# TODO use seboolean module to make proxy
 
 - name: enable nginx service
   service:

@@ -1,0 +1,17 @@
+---
+- name: Add repository
+  yum_repository:
+    name: nexus
+    description: tt nexus repository
+    baseurl: "{{ nexus_baseurl }}"
+    username: "{{ nexus_username }}"
+    password: "{{ nexus_password }}"
+  tags:
+    - deployment
+
+- name: install dkashinsky-app (ping-pong web api)
+  yum:
+    name: dkashinsky-app
+    state: present
+  tags:
+    - deployment

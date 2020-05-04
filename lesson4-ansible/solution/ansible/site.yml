@@ -1,7 +1,6 @@
 ---
 - hosts: development
   remote_user: centos
-
   become: yes
 
   roles:
@@ -10,9 +9,6 @@
 
     - role: nginx
       tags: ["configuration"]
-    # role: web
-    # tags: ["deployment"]
-# yum_repository:
-#   name: nexus
-#   description: tt nexus repository
-#   baseurl:
+
+    - role: web-api
+      tags: ["deployment"]

@@ -1,9 +1,10 @@
 server {
-    listen 8000;
+    listen      80;
+    server_name app.com www.app.com;
 
     root {{ server_root_directory }};
 
-    location = / {
+    location / {
         index index.html;
     }
 
