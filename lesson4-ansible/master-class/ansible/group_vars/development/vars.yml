@@ -1,0 +1,6 @@
+env: development
+
+nginx_greetings:
+  - { name: "Greetings, my name is", value: "{{ ansible_hostname }}" }
+  - { name: "My kernel is", value: "{{ ansible_kernel }}" }
+  - { name: "Am I happy?", value: "Yeah" }
