@@ -1,0 +1,10 @@
+[Unit]
+Description=Timer to run service on schedule
+
+[Timer]
+OnCalendar=Mon..Fri 22:30
+OnCalendar=Sun 17:50
+Unit=hello-world.service
+
+[Install]
+WantedBy=timers.target

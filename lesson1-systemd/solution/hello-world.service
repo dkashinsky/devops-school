@@ -1,0 +1,14 @@
+[Unit]
+Description=Web based Hello-World java application
+Requires=nginx.service
+
+[Service]
+Type=simple
+ExecStart=/bin/java -jar /home/user/service/helloworld.jar
+ExecStartPost=/bin/bash /home/user/service/hello-world-shutdown.sh
+SuccessExitStatus=143
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
+
