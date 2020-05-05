@@ -9,6 +9,6 @@ Write `systemd` unit (for Java application) which:
     - starts from Monday to Friday at 22:30 and on Sunday at 17:50;
     - stops after 5 minutes after start;
 
-*Java app can be taken from official Jetty "Hello Workd":* https://github.com/eclipse/jetty.project/tree/jetty-10.0.x/examples/embedded 
+*Java app can be taken from official Jetty "Hello World":* https://github.com/eclipse/jetty.project/tree/jetty-10.0.x/examples/embedded 
 
 Scoring: max = 2, min = 1
