@@ -1,0 +1,11 @@
+[Unit]
+Description=Simple ping-pong web based java application
+
+[Service]
+Type=simple
+ExecStart=/bin/java -jar /usr/local/ping-pong/ping-pong.jar
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
+
